@@ -1,7 +1,7 @@
 const fs = require('fs');
-const Path = require('path');
+const path = require('path');
 
-const file = Path.join(__dirname, 'text.txt');
+const file = path.join(__dirname, 'text.txt');
 
 const s = fs.createReadStream(file);
 
