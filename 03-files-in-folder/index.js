@@ -2,7 +2,7 @@ const { readdir, stat } = require('fs');
 
 const path = require('path');
 
-readdir(path.join(__dirname, 'secret-folder'), (err, files) => {
+readdir(path.join(__dirname, 'secret-folder'), (_, files) => {
   for (const file of files) {
     const { name, ext } = path.parse(file);
 

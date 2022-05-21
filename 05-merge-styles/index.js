@@ -15,7 +15,7 @@ fs.unlink(bundleFile, () => {
 const addFileToBunde = (file) => {
   if (path.extname(file) !== '.css') return;
 
-  fs.readFile(path.join(stylesDir, file), (_, data) => {
-    fs.appendFile(bundleFile, data, () => {});
+  fs.readFile(path.join(stylesDir, file), (_, data) => {   
+    fs.writeFile(bundleFile, data, { flag: 'a' }, () => {});
   });
 };
